@@ -20,6 +20,8 @@
 <meta property="og:description" content="Кератиновое выпрямление, ботокс для волос, холодное восстановление. Реальные результаты до/после, запись в Telegram/WhatsApp.">
 <meta property="og:url" content="https://pakhomovabeauty.ru/">
 <meta property="og:image" content="https://pakhomovabeauty.ru/images/master-natalia.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Пахомова · Реконструкция волос · Ростов‑на‑Дону">
 <meta name="twitter:description" content="Кератиновое выпрямление, ботокс для волос, холодное восстановление. Реальные результаты до/после.">
@@ -43,6 +45,33 @@
   "sameAs": [
     "https://www.instagram.com/pakhomova_beauty",
     "https://t.me/Blonde_in_red"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Услуги реконструкции волос",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Кератиновое выпрямление волос"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ботокс для волос"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Холодное восстановление волос"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Пампинг (прикорневой объём)"}}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Мне сказали сначала срезать длину","acceptedAnswer":{"@type":"Answer","text":"Реконструкция помогает сохранить длину и восстановить повреждённый волос. В большинстве случаев стрижка не нужна — приходите на диагностику, честно скажу."}},
+    {"@type":"Question","name":"Я уже пробовала — эффект держался неделю","acceptedAnswer":{"@type":"Answer","text":"Поверхностный уход смывается быстро. Профессиональная реконструкция работает внутри структуры волоса. Эффект держится 3–6 месяцев и накапливается."}},
+    {"@type":"Question","name":"Боюсь химии","acceptedAnswer":{"@type":"Answer","text":"Подбирается безопасная процедура под конкретную ситуацию. Для чувствительных — холодное восстановление, без термической обработки и формальдегида."}},
+    {"@type":"Question","name":"Не понимаю, что выбрать","acceptedAnswer":{"@type":"Answer","text":"Для этого и существует бесплатная диагностика. Оцениваю пористость, эластичность, историю окрашиваний — и только потом рекомендую программу."}},
+    {"@type":"Question","name":"Можно при беременности?","acceptedAnswer":{"@type":"Answer","text":"Да. Специально подобранные составы безопасны в период беременности и кормления — работаю с этой аудиторией регулярно."}},
+    {"@type":"Question","name":"Кому нельзя делать пампинг?","acceptedAnswer":{"@type":"Answer","text":"Есть противопоказания: аллергия на химические составы, тотальное осветление с корнями короче 4 см, кератин или ботокс менее 1,5 месяцев назад, активные кожные заболевания головы. Уточняю всё на диагностике — так волосы возьмут завиток ровно."}},
+    {"@type":"Question","name":"Что нельзя делать после пампинга?","acceptedAnswer":{"@type":"Answer","text":"Первое время — не вытягивать зону объёма утюжком или плойкой, не ложиться спать с мокрой головой и не краситься в блонд. Если планируете окрашивание — лучше через 10–14 дней после процедуры."}},
+    {"@type":"Question","name":"Что делать, когда объём отрастёт?","acceptedAnswer":{"@type":"Answer","text":"Через 3–6 месяцев можно сделать коррекцию — уберу старый объём и накручу новый за один визит. Если продолжать не хотите, а волосы сами не распрямились — сделаю анти-химию, она безопасно вернёт гладкость."}},
+    {"@type":"Question","name":"Как добраться?","acceptedAnswer":{"@type":"Answer","text":"Студия расположена в удобной для города локации — рядом парковка для тех, кто приезжает на машине, и хорошая транспортная развязка для общественного транспорта. Точный адрес и ориентиры пришлю при записи."}}
   ]
 }
 </script>
@@ -246,6 +275,26 @@ nav[data-theme="dark"] .nv-cta:hover{background:var(--gold-lt);color:var(--black
 @keyframes heroTick{0%,100%{height:18px;opacity:.3}50%{height:34px;opacity:.8}}
 @media(max-width:640px){.hero-h1{max-width:20ch}}
 @media(max-height:700px){.hero-scroll{display:none}}
+
+/* Desktop: split layout — video kept at its own aspect ratio in a right-hand panel, text left-aligned */
+@media(min-width:761px){
+  .hero-media{
+    inset:96px 28px 28px auto;left:auto;
+    width:min(46%,640px);
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.55);
+  }
+  .hero-media video{opacity:1}
+  .hero-media::after{background:linear-gradient(180deg,rgba(10,10,12,0) 55%,rgba(10,10,12,.4) 100%)}
+  .hero-content{
+    text-align:left;margin:0;padding:0 46% 0 clamp(20px,4vw,48px);
+  }
+  .hero-eyebrow,.hero-h1,.hero-sub{margin-left:0;margin-right:0;max-width:none}
+  .hero-h1{max-width:15ch}
+  .hero-sub{max-width:36ch}
+  .hero-ctas{justify-content:flex-start}
+}
 
 .stack-pin{transform-origin:center top;filter:brightness(1)}
 
