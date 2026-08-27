@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pakhomova.ru/sitemap.xml
+Sitemap: https://pakhomovabeauty.ru/sitemap.xml
