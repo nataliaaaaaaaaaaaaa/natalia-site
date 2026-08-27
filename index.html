@@ -372,17 +372,17 @@ nav[data-theme="dark"] .nv-cta:hover{background:var(--gold-lt);color:var(--black
 .ba-nav-count b{color:var(--ink);font-weight:600}
 .svc-gift{
   margin-top:44px;padding:30px 34px;border-radius:20px;color:var(--ink-2);
-  background:linear-gradient(155deg,#FBF7EF,var(--cream) 55%,#F2E9D8);
-  border:1px solid rgba(138,100,50,.25);
+  background:linear-gradient(155deg,#FDF9EE,var(--cream) 45%,#EFDFB9);
+  border:1px solid rgba(138,100,50,.32);
   position:relative;overflow:hidden;isolation:isolate;
   display:flex;align-items:center;gap:22px;font-size:14.5px;
-  box-shadow:0 24px 48px -32px rgba(74,46,20,.4);
+  box-shadow:0 24px 48px -28px rgba(74,46,20,.45), 0 0 36px 2px rgba(201,150,90,.28), inset 0 1px 0 rgba(255,255,255,.7);
 }
 .svc-gift::before{
   content:'';position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.5) 46%,rgba(232,201,138,.55) 50%,rgba(255,255,255,.5) 54%,transparent 65%);
+  background:linear-gradient(100deg,transparent 28%,rgba(255,255,255,.75) 46%,rgba(232,201,138,.9) 50%,rgba(255,255,255,.75) 54%,transparent 72%);
   background-size:260% 100%;
-  animation:giftShimmer 6s ease-in-out infinite;
+  animation:giftShimmer 5s ease-in-out infinite;
   pointer-events:none;
 }
 @keyframes giftShimmer{0%{background-position:260% 0}100%{background-position:-40% 0}}
@@ -397,12 +397,13 @@ nav[data-theme="dark"] .nv-cta:hover{background:var(--gold-lt);color:var(--black
 .svc-gift-ico{
   flex:0 0 auto;width:52px;height:52px;border-radius:50%;position:relative;
   display:flex;align-items:center;justify-content:center;
-  border:1px solid rgba(138,100,50,.3);
-  background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.7),transparent 65%);
+  border:1px solid rgba(138,100,50,.35);
+  background:radial-gradient(circle at 32% 28%,#fff,rgba(255,240,210,.4) 60%,transparent 75%);
+  box-shadow:0 4px 14px -4px rgba(138,100,50,.35), inset 0 0 0 1px rgba(255,255,255,.6);
 }
 .svc-gift-ico::after{
-  content:'';position:absolute;inset:-6px;border-radius:50%;
-  background:radial-gradient(circle,rgba(201,150,90,.35),transparent 70%);
+  content:'';position:absolute;inset:-11px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,150,90,.5),transparent 70%);
   animation:sparkTwinkle 3.2s ease-in-out infinite;
 }
 .svc-gift-ico svg{position:relative;width:22px;height:22px;color:var(--gold-dp);animation:sparkPulse 3.2s ease-in-out infinite}
@@ -414,11 +415,12 @@ nav[data-theme="dark"] .nv-cta:hover{background:var(--gold-lt);color:var(--black
 @media(max-width:480px){.svc-gift{flex-direction:column;align-items:flex-start;text-align:left;gap:16px;padding:26px}}
 
 /* ═══ Master ═══ */
-.master-sec{position:relative;overflow:hidden;background:var(--cream)}
+.master-sec{position:relative;overflow:hidden;background:radial-gradient(120% 100% at 50% 0%,#FBF6EA 0%,var(--cream) 55%,#EDE0C4 100%)}
 .master-sec::before{
   content:'';position:absolute;inset:-15%;z-index:0;pointer-events:none;
-  background:radial-gradient(36% 30% at 22% 25%,rgba(232,201,138,.28),transparent 62%),
-             radial-gradient(32% 26% at 78% 72%,rgba(201,150,90,.18),transparent 65%);
+  background:radial-gradient(38% 34% at 18% 20%,rgba(201,150,90,.55),transparent 60%),
+             radial-gradient(34% 30% at 84% 78%,rgba(232,201,138,.45),transparent 62%);
+  filter:blur(6px);
   animation:ctaShimmer 14s ease-in-out infinite alternate;
   animation-play-state:paused;
   will-change:transform,opacity;
