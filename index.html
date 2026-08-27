@@ -119,7 +119,7 @@ ul{list-style:none}
 
 h1,h2,h3{text-wrap:balance;font-weight:600;letter-spacing:-.02em}
 p{text-wrap:pretty}
-em{font-style:italic;font-family:var(--serif);color:var(--gold);font-weight:400}
+em{font-style:italic;font-family:var(--serif);color:var(--gold);font-weight:400;position:relative;top:-0.09em}
 
 ::selection{background:var(--gold);color:#fff}
 
@@ -261,6 +261,7 @@ nav[data-theme="dark"] .nv-cta:hover{background:var(--gold-lt);color:var(--black
   font-size:clamp(38px,6.4vw,86px);line-height:1.02;letter-spacing:-.03em;font-weight:600;
   color:#fff;max-width:18ch;margin:0 auto 28px;
 }
+.hero-h1 em{color:var(--gold-lt)}
 .hero-sub{
   font-size:clamp(15px,1.2vw,17px);line-height:1.65;color:rgba(255,255,255,.68);
   max-width:38ch;margin:0 auto 44px;font-weight:400;
@@ -275,6 +276,10 @@ nav[data-theme="dark"] .nv-cta:hover{background:var(--gold-lt);color:var(--black
 @keyframes heroTick{0%,100%{height:18px;opacity:.3}50%{height:34px;opacity:.8}}
 @media(max-width:640px){.hero-h1{max-width:20ch}}
 @media(max-height:700px){.hero-scroll{display:none}}
+@media(max-width:760px){
+  .hero-content{transform:translateY(-30px)}
+  .hero-eyebrow{font-size:13px;letter-spacing:.16em}
+}
 
 /* Desktop: split layout — video kept at its own aspect ratio in a right-hand panel, text left-aligned */
 @media(min-width:761px){
@@ -675,14 +680,14 @@ nav[data-theme="dark"] .nv-cta:hover{background:var(--gold-lt);color:var(--black
   <section class="stack-item hero" id="hero" data-theme="dark" style="z-index:1">
     <div class="stack-pin">
       <div class="hero-media">
-        <video autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg">
+        <video autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg">
           <source src="video/hair-restoration-scrub.mp4" type="video/mp4" media="(min-width:761px)">
           <source src="video/hair-restoration-mobile.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hero-content">
         <div class="hero-eyebrow rv">Реконструкция волос<br>Ростов‑на‑Дону и Аксай</div>
-        <h1 class="hero-h1 rv rv-d1">Волосы как<br> с обложки <em>глянца</em></h1>
+        <h1 class="hero-h1 rv rv-d1">Волосы<br> как с обложки<br> <em>глянца</em></h1>
         <p class="hero-sub rv rv-d2">Здоровые, ухоженные волосы — ваша визитная карточка и главный признак стиля.</p>
         <div class="hero-ctas rv rv-d3">
           <a href="#visit" class="btn btn-primary on-dark">Записаться на диагностику
